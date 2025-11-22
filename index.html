@@ -11,7 +11,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f4f7fa; /* Fondo gris claro */
+            background-color: #eef2f5; /* Fondo más claro y moderno */
         }
         /* Estilos específicos para el botón principal con hover */
         .survey-card {
@@ -47,8 +47,9 @@
 </head>
 <body>
 
-    <!-- Cabecera del Portal (Simulación UGM) -->
-    <header class="bg-blue-800 shadow-lg sticky top-0 z-10">
+    <!-- Cabecera del Portal (Estilo Institucional Mejorado) -->
+    <!-- Usamos indigo-900 para un azul oscuro institucional -->
+    <header class="bg-indigo-900 shadow-xl sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo UGM (Imagen) -->
             <img 
@@ -60,13 +61,14 @@
 
             <!-- Información del Usuario Logueado -->
             <div class="flex items-center space-x-3 text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span class="text-sm font-medium">
+                <span class="text-sm font-semibold">
                     Bienvenido, Jose Maria Roca
                 </span>
-                <button class="ml-4 text-sm text-yellow-400 hover:text-white transition duration-150 ease-in-out">
+                <!-- Usamos yellow-500 como acento para el botón de cerrar sesión -->
+                <button class="ml-4 text-sm text-yellow-500 hover:text-white transition duration-150 ease-in-out">
                     Cerrar Sesión
                 </button>
             </div>
@@ -74,9 +76,10 @@
     </header>
 
     <!-- Contenido Principal -->
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
-        <h1 class="text-3xl font-extrabold text-gray-900 mb-6 border-b-2 border-yellow-400 pb-2">
+        <!-- Título principal con línea de acento amarillo -->
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-8 border-b-4 border-yellow-500 pb-3">
             Panel Principal del Alumno
         </h1>
 
@@ -84,8 +87,8 @@
             Aquí podrás acceder a tus servicios académicos, calificaciones y encuestas pendientes.
         </p>
 
-        <!-- Sección de Encuestas Pendientes -->
-        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-red-600">
+        <!-- Sección de Encuestas Pendientes (Acción Requerida - Color Rojo/Urgente) -->
+        <div class="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-red-600">
             <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3 text-red-600" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.414 2.414a1 1 0 001.414-1.414L11 9.586V6z" clip-rule="evenodd" />
@@ -117,37 +120,47 @@
             </div>
         </div>
 
-        <!-- Sección de Información Adicional (Simulada) -->
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-md">
-                <h3 class="text-xl font-semibold text-blue-800 mb-3">Mis Calificaciones</h3>
+        <!-- Sección de Información Adicional (Simulada - Estilo UGM) -->
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-indigo-500 hover:shadow-lg transition">
+                <h3 class="text-xl font-semibold text-indigo-800 mb-3">Mis Calificaciones</h3>
                 <p class="text-gray-700">Revisa el estado de tus notas del semestre actual.</p>
-                <button class="mt-4 text-blue-600 hover:text-blue-800 font-medium">Ver Historial Académico &rarr;</button>
+                <button class="mt-4 text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                    Ver Historial Académico 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </button>
             </div>
-            <div class="bg-white p-6 rounded-xl shadow-md">
-                <h3 class="text-xl font-semibold text-blue-800 mb-3">Horario de Clases</h3>
+            <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-yellow-500 hover:shadow-lg transition">
+                <h3 class="text-xl font-semibold text-indigo-800 mb-3">Horario de Clases</h3>
                 <p class="text-gray-700">Consulta tu horario actualizado y salones asignados.</p>
-                <button class="mt-4 text-blue-600 hover:text-blue-800 font-medium">Descargar Horario &rarr;</button>
+                <button class="mt-4 text-indigo-600 hover:text-indigo-800 font-medium flex items-center">
+                    Descargar Horario 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                </button>
             </div>
         </div>
 
     </main>
     
     <!-- Pie de página -->
-    <footer class="bg-gray-100 mt-10 p-4 text-center text-gray-500 text-sm">
-        &copy; 2025 Universidad G M (Simulación Demo). Todos los derechos reservados.
+    <footer class="bg-gray-200 mt-12 p-6 text-center text-gray-600 text-sm border-t border-gray-300">
+        &copy; 2025 Universidad Gabriela Mistral (Simulación Demo). Todos los derechos reservados.
     </footer>
 
     <!-- Modal para Encuesta Embebida -->
-    <!-- backdrop-blur-sm crea el efecto de difuminado del contenido de fondo -->
     <div id="survey-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm transition-opacity duration-300">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-4xl h-5/6 flex flex-col" id="modal-content-container">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-5xl h-[90vh] flex flex-col" id="modal-content-container">
             <!-- Modal Header -->
-            <div class="flex justify-between items-center p-4 border-b border-gray-200">
-                <h3 class="text-xl font-bold text-blue-800">Evaluación Docente Obligatoria</h3>
-                <button onclick="closeSurveyModal()" class="text-gray-500 hover:text-red-600 transition">
+            <div class="flex justify-between items-center p-4 border-b border-indigo-200 bg-indigo-50 rounded-t-xl">
+                <h3 class="text-xl font-bold text-indigo-800 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM6 14a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zM15 14a1 1 0 00-1 1v2a1 1 0 102 0v-2a1 1 0 00-1-1zM4 10a1 1 0 000 2h12a1 1 0 100-2H4z" />
+                    </svg>
+                    Evaluación Docente Obligatoria
+                </h3>
+                <button onclick="closeSurveyModal()" class="text-gray-500 hover:text-red-600 transition p-1">
                     <!-- Icono para cerrar (X) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
